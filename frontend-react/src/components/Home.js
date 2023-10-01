@@ -1,4 +1,4 @@
-import HomePng from '../assets/home.png'
+import HomePng from '../assets/home.jpeg'
 
 const Home = () => {
     return (
