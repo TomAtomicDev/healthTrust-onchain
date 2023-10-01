@@ -57,7 +57,7 @@ module.exports = {
    * $ truffle test --network <network-name>
    */
 
-  contracts_build_directory: "../client/src/contracts",
+  contracts_build_directory: "../frontend-react/src/contracts",
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
@@ -70,19 +70,6 @@ module.exports = {
      port: 8546,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
-    //
-    // An additional network, but with some advanced options…
-    // advanced: {
-    //   port: 8777,             // Custom port
-    //   network_id: 1342,       // Custom network
-    //   gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
-    //   gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
-    //   from: <address>,        // Account to send transactions from (default: accounts[0])
-    //   websocket: true         // Enable EventEmitter interface for web3 (default: false)
-    // },
-    //
-    // Useful for deploying to a public network.
-    // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
     sepolia: {
       provider: () => new HDWalletProvider(MNEMONIC, `https://sepolia.infura.io/v3/${PROJECT_ID}`),
       network_id: 11155111,       // Sepolia's id
